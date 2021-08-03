@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="row d-flex justify-content-center">
+    <div class='card w-50 border shadow-4 mb-3 mt-4 '>
+        <div class="card-body">
+            <div class="row">
+                <form action="{% url 'need_help'%}" method="post">
+                    {% csrf_token %}
+                
+                    <legend><h1>Pick the articles that you need</h1></legend>
+                    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                    {% for key, value in available_dict.items %}
+                    <div class="col">
+                        <div class="form-group mb-2">
+                            <label for="typeNumber" class="form-label" id="typeNumber">{{ key }}</label>
+                            <input type="number" id="typeNumber"  value = 0 name="{{key}}"  class="form-control">
+                            <span>Articles disponibles: {{value}}</span>
+                        </div>
+                    </div>
+                    
+                           
+                    {% endfor %}
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block mb-4">
+            </form>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+    
+    
+
+{% endblock%}
