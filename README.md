@@ -1,6 +1,9 @@
 # disaster_consulting
 
-Considering recent events in Belgium, our company provides necessary tools to charity organisations aiding resources managing process.
+**Considering recent events in Belgium, our company provides necessary tools to charity organisations aiding resources managing process.
+
+
+
 ![image](https://user-images.githubusercontent.com/80903065/136177787-799af858-1d80-41b8-b0fc-6afece948719.png)
 
 
